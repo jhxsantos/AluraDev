@@ -36,7 +36,7 @@
 .option {
     color: var(--cor-do-botao-salvar);    
     font-family: var(--fonte-principal);
-    font-size: 12px;
+    font-size: 16px;
 }
 
 .color-picker {
@@ -45,7 +45,7 @@
     border-radius: 8px;     
     height: 50px;
     padding: .3rem;
-    width: 100%;
+    width: 96%;
 }
 
 @media screen and (min-width: 768px) {

@@ -38,6 +38,7 @@
     border-radius: 8px;
     font-family: 'Courier New', Courier, monospace;
     outline: 0;
+    white-space: pre-line;
 }
 
 .botao--visualizar {

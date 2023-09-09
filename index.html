@@ -96,6 +96,7 @@
                         <label for="personalizacao__linguagem" class="personalizacao__label">Personalização</label>
                         <div class="personalizacao__info">
                             <select class="personalizacao__linguagem" id="personalizacao__linguagem" name="personalizacao__linguagem" required>
+                                <option class="option" value="" disabled selected>Selecione a linguagem</option>
                                 <option class="option" value="javascript">JavaScript</option>
                                 <option class="option" value="html"      >HTML</option>
                                 <option class="option" value="css"       >CSS</option>
@@ -106,7 +107,10 @@
                     </div>
                 </section>
                 <section class="classe-botao-salvar-projeto">
-                    <input class="botao--salvar-projeto" id="botao--salvar-projeto" type="submit" value="Salvar projeto">
+                    <input class="botao__form botao--salvar-projeto" id="botao--salvar-projeto" type="submit" value="Salvar projeto">
+                </section>
+                <section class="classe-botao-salvar-projeto">
+                    <input class="botao__form botao--limpar-campos" id="botao--limpar-campos" type="submit" value="Limpar campos">
                 </section>
             </div>
         </form>

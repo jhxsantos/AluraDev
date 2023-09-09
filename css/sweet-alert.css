@@ -4,7 +4,7 @@
 
 .swal-modal {
     background-color: var(--cor-branco);
-    border: 3px solid white;
+    /* border: 3px solid white; */
 }
 
 .swal-title {
@@ -12,6 +12,7 @@
     font-family:  var(--fonte-principal);
     font-weight: 100;
     font-size: 16px;
+    color: var(--cor-de-fundo);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21);
     margin-bottom: 28px;
 }
@@ -33,7 +34,7 @@
 .swal-footer {
     background-color: var(--cor-branco);
     margin-top: 32px;
-    border-top: 1px solid #E9EEF1;
+    /* border-top: 1px solid #E9EEF1; */
     overflow: hidden;
 }
 

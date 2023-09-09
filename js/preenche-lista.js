@@ -79,22 +79,49 @@ export function preencheLista(storage) {
             const linguagem  = elemento.linguagemProjeto;
             c_apicaHighlight(areaCodigo, linguagem);
 
-            document.querySelector("[data-excluir_" + i + "]").addEventListener("click", () => {             
+            document.querySelector("[data-excluir_" + i + "]").addEventListener("click", () => {    
 
-                const nomeProjeto = elemento.nomeProjeto;
-                
-                const projetos = JSON.parse(sessionStorage.getItem("projetos"));
+                try {
+                    swal({
+                        title: `Excluindo o projeto "${elemento.nomeProjeto}"...`,
+                        text: "Você tem certeza?",
+                        icon: 'warning',
+                        closeOnClickOutside: false,
+                        dangerMode: true,
+                        buttons: {
+                            cancel: {
+                            text: "Cancelar",
+                            value: null,
+                            visible: true,
+                            className: "",
+                            closeModal: true
+                            },
+                            confirm: {
+                            text: "Excluir",
+                            value: true,
+                            visible: true,
+                            className: "",
+                            closeModal: true
+                            }
+                        }                    
+                    }).then((result) => {   
+                        if (result) {
+                            const nomeProjeto = elemento.nomeProjeto;                
+                            const projetos = JSON.parse(sessionStorage.getItem("projetos"));
+                            projetos.forEach( (elemento, indiceProjeto)  => {                
+                                if (elemento.nomeProjeto === nomeProjeto) {
+                                    projetos.splice(indiceProjeto, 1);
+                                    sessionStorage.removeItem("projetos");
+                                    sessionStorage.setItem("projetos", JSON.stringify(projetos));
+                                    window.location.href = "./comunidade.html";
+                                }
+                            });
+                        }
+                    });  
+                } catch(ex) {
+                    alert(ex.message);
+                };  
 
-                projetos.forEach( (elemento, indiceProjeto)  => {
-                
-                    if (elemento.nomeProjeto === nomeProjeto) {
-                        projetos.splice(indiceProjeto, 1);
-                        sessionStorage.removeItem("projetos");
-                        sessionStorage.setItem("projetos", JSON.stringify(projetos));
-                        window.location.href = "./comunidade.html";
-                    }
-                });
-                
                 excluiu = true;
             });
 

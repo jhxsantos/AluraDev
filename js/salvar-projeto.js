@@ -2,9 +2,6 @@ const btnSalvar = document.querySelector(".botao--salvar-projeto");
 
 btnSalvar.addEventListener("click", (event) => {
 
-    // sessionStorage.clear();
-    // return;
-
     event.preventDefault();
 
     if (document.querySelector(".codigo__codigo").textContent === "") {
@@ -91,20 +88,6 @@ btnSalvar.addEventListener("click", (event) => {
                 document.querySelector(".moldura__codigo").style.backgroundColor = document.querySelector(".color-picker").value;
                 document.querySelector(".codigo__codigo").textContent = "";
             }
-
-            // if (existeProjeto) {
-            //     swal("Já existe um projeto com esse nome.").then( () => {
-            //         document.querySelector(".projeto__nome").focus();
-            //     });
-            // } else {
-            //     projetos.push(projeto);
-            //     sessionStorage.removeItem("projetos");
-            //     sessionStorage.setItem("projetos", JSON.stringify(projetos));
-
-            //     document.querySelector(".formulario").reset();
-            //     document.querySelector(".moldura__codigo").style.backgroundColor = document.querySelector(".color-picker").value;
-            //     document.querySelector(".codigo__codigo").textContent = "";
-            // }
         }
     } 
 });
