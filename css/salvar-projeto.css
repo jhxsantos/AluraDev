@@ -1,0 +1,26 @@
+.botao--salvar-projeto {
+    background-color: var(--cor-do-botao-salvar);
+    border: none;
+    border-radius: 8px;
+    color: var(--cor-branco);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+    margin: 1rem 0 3rem 0;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.botao--salvar-projeto:hover {
+    background: var(--cor-do-botao-salvar-hover);
+}
+
+.botao--salvar-projeto:active {
+    background: var(--cor-do-botao-salvar-pressed);
+    border: var(--borda-do-botao-salvar-pressed);
+}
+
+.botao--salvar-projeto:focus {
+    background: var(--cor-do-botao-salvar-focus);
+    outline: none;
+}

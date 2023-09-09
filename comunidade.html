@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AluraDev</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/highlight.css">
+</head>
+<body class="corpo">
+    <header class="cabecalho">
+        <input class="check__lupa-pesquisa" id="check-lupa-pesquisa" type="checkbox">
+        <div class="logotipo">
+            <img src="./img/Logo.svg" alt="Logotipo AluraDev">        
+        </div>
+        <input class="pesquisa" type="search" placeholder="Busque por algo">
+        <div class="busca-menu">
+            <label class="label__img__lupa-pesquisa" for="check-lupa-pesquisa">
+                <span class="img__lupa-pesquisa"></span>
+            </label>
+            <input class="check__menu-hamburguer" id="check-menu-hamburguer" type="checkbox">
+            <label class="label__img__menu-hamburguer" for="check-menu-hamburguer">
+                <span class="img__menu-hamburguer"></span>
+            </label>
+            <ul class="lista-menu">
+                <li class="lista-menu__item">
+                    <a class="c__menu-lateral__item" href="./index.html">
+                        <img class="c__menu-lateral__imagem__codigo" src="./img/icon_code.svg" alt="Ícone do editor de código">
+                        <p class="c__menu-lateral__texto__codigo">Editor de código</p>
+                    </a>
+                </li>
+                <li class="lista-menu__item">
+                    <a class="c__menu-lateral__item" href="./comunidade.html">
+                        <img class="c__menu-lateral__imagem__comunidade" src="./img/icon_users.svg" alt="Ícone da comunidade">
+                        <p class="c__menu-lateral__texto__comunidade">Comunidade</p>
+                    </a>
+                </li>
+                <li class="lista-menu__item">
+                    <hr>
+                </li>
+                <li class="lista-menu__item">
+                    <div class="usuario__hover">
+                        <img class="usuario__foto" src="./img/foto-usuario-1X.jpg" alt="foto do usuário logado">
+                        <p class="usuario__nome">Harry</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="usuario">
+                <div class="usuario__hover">
+                    <img class="usuario__foto" src="./img/foto-usuario-1X.jpg" alt="foto do usuário logado">
+                    <p class="usuario__nome">Harry</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="c__principal">
+        <section class="c__menu-lateral">
+            <label class="c__menu-lateral__label">Menu</label>
+            <a class="c__menu-lateral__item" href="./index.html">
+                <img class="c__menu-lateral__imagem__codigo" src="./img/icon_code.svg" alt="Ícone do editor de código">
+                <p class="c__menu-lateral__texto__codigo">Editor de código</p>
+            </a>
+            <a class="c__menu-lateral__item" href="./comunidade.html">
+                <img class="c__menu-lateral__imagem__comunidade" src="./img/icon_users.svg" alt="Ícone da comunidade">
+                <p class="c__menu-lateral__texto__comunidade">Comunidade</p>
+            </a>
+        </section>
+        
+        <section class="c__modulo-central">
+            <h2>Não há códigos para mostrar.</h2>
+        </section>           
+        
+    </main>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="./comunidade.js" type="module"></script>
+</body>
+</html>

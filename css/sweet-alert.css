@@ -1,0 +1,50 @@
+.swal-overlay {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.swal-modal {
+    background-color: var(--cor-branco);
+    border: 3px solid white;
+}
+
+.swal-title {
+    margin: 0px;
+    font-family:  var(--fonte-principal);
+    font-weight: 100;
+    font-size: 16px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21);
+    margin-bottom: 28px;
+}
+
+.swal-text {
+    background-color: var(--cor-de-fundo);
+    font-family:  var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 100;
+    padding: 17px;
+    border: none;
+    border-radius: 8px;
+    display: block;
+    margin: 22px;
+    text-align: center;
+    color: var(--cor-branco);
+}
+
+.swal-footer {
+    background-color: var(--cor-branco);
+    margin-top: 32px;
+    border-top: 1px solid #E9EEF1;
+    overflow: hidden;
+}
+
+.swal-button {
+    padding: 10px 40px;
+    border-radius: 8px;
+    background-color: var(--cor-do-botao-salvar);
+    font-family:  var(--fonte-principal);
+    font-weight: 100;
+    font-size: 16px;
+    color: var(--cor-branco);
+    border: none;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+}

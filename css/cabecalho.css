@@ -1,0 +1,219 @@
+.cabecalho {
+    column-gap: 1rem;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    justify-content: space-between;
+    padding: 2rem 0 2rem 0;
+}
+
+.logotipo {
+    display: flex;
+    align-items: center;
+}
+
+.busca-menu {
+    display: flex;
+    position: relative;
+    justify-content: right;
+}
+
+.pesquisa {
+    border: none;
+    border-radius: 8px; 
+    background: #FFFFFF29;
+    color: var(--cor-branco);
+    display: none;
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    padding: 1rem;
+    width: 100%;
+}
+
+.pesquisa:hover {
+    background: #FFFFFF3D;
+}
+
+.pesquisa:focus {
+    outline: none;
+}
+
+.label__img__lupa-pesquisa {
+    display: flex;
+    border-radius: 16px;
+}
+
+.img__lupa-pesquisa {
+    background: url("../img/LupaPesquisa.svg") no-repeat;
+    background-position: center;
+    padding: 1.3rem;    
+}
+
+.label__img__lupa-pesquisa:hover {    
+    background-color: var(--cor-menu-hamburguer-hover);
+}
+
+.label__img__lupa-pesquisa:active {    
+    background-color: var(--cor-menu-hamburguer-pressed);
+}
+
+.check__lupa-pesquisa {
+    display: none;
+}
+
+.check__lupa-pesquisa:checked~.logotipo {
+    display: none;
+}
+
+.check__lupa-pesquisa:checked~.pesquisa {
+    display: block;
+}
+
+.check__lupa-pesquisa:checked~.busca-menu>.label__img__lupa-pesquisa>.img__lupa-pesquisa {
+    background: url("../img/X-menu-aberto.svg") no-repeat;
+    background-position: center;
+    border-radius: 16px;
+    padding: 1.3rem;
+}
+
+.label__img__menu-hamburguer {
+    display: flex;
+    border-radius: 16px;
+}
+
+.img__menu-hamburguer {    
+    background: url("../img/MenuHamburguer.svg") no-repeat;
+    background-position: center;
+    border-radius: 16px;
+    padding: 1.3rem;
+}
+
+.label__img__menu-hamburguer:hover {    
+    background-color: var(--cor-menu-hamburguer-hover);
+}
+
+.label__img__menu-hamburguer:active {    
+    background-color: var(--cor-menu-hamburguer-pressed);
+}
+
+.lista-menu {
+    background-color: var(--cor-lista-menu-hamburguer);
+    border-radius: 8px;
+    display: none;
+    left: -199px;
+    padding: 1rem;
+    position: absolute;
+    top: calc(100% + 1rem);
+    width: 250px;
+}
+
+.check__menu-hamburguer {
+    display: none;
+}
+
+.check__menu-hamburguer:checked~.lista-menu {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.7rem;
+}
+
+.check__menu-hamburguer:checked~.label__img__menu-hamburguer>.img__menu-hamburguer {
+    background: url("../img/X-menu-aberto.svg") no-repeat;
+    background-position: center;
+    border-radius: 16px;
+    padding: 1.3rem;
+}
+
+.usuario {
+    display: none;
+}
+
+.usuario__hover {
+    align-items: center;
+    border-radius: 8px;
+    column-gap: 0.7rem;
+    display: flex;
+    padding: 0.7rem;
+}
+
+.usuario__hover:hover {
+    background-color: var(--cor-hover-usuario);
+}
+
+.usuario__foto {
+    border-radius: 50%;
+}
+
+.usuario__nome {
+    color: var(--cor-branco);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+
+}
+
+@media screen and (min-width: 768px) {
+
+    .cabecalho {
+        padding: 1rem 0 2rem 0;
+    }
+
+    .pesquisa{
+        display: block;
+    }
+
+    .img__lupa-pesquisa {
+        display: none;
+    }
+
+    .check__lupa-pesquisa:checked~.logotipo {
+        display: block;
+    }
+
+    .lista-menu {
+        left: -240px;
+    }
+
+    .usuario {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+
+    .cabecalho {
+        align-items: center;
+        padding: 0 0 2rem 0;
+        column-gap: 0;
+    }
+
+    .logotipo {
+        width: 300px;
+    }
+
+    .busca-menu {       
+        width: 300px;
+    }    
+
+    .pesquisa {
+        width: calc(100% - 320px);
+        margin-left: 0rem;
+        margin-right: 1.5rem;
+    }
+
+    .img__menu-hamburguer {
+        display: none;
+    }
+
+    .check__menu-hamburguer:checked~.lista-menu {
+        display: none;
+    }
+
+    .usuario {
+        align-items: center;
+        display: flex;
+        justify-content: right;
+    }
+
+}
